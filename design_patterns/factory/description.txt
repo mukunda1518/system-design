@@ -1,0 +1,15 @@
+
+Factory Pattern
+- The Factory Design Pattern is a creational pattern that provides a way to create objects without
+ specifying their exact class in the code
+
+
+Usage:
+- When you have multiple related classes and want to centralize object creation logic.
+- This is useful when the exact type of object that needs to be created depends on certain conditions.
+
+
+Purpose
+- Encapsulates the object creation logic
+- Decouples the client code from specific implementations.
+
