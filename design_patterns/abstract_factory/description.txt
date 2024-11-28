@@ -1,0 +1,8 @@
+# Very Good read - https://www.enjoyalgorithms.com/blog/abstract-factory-design-pattern
+
+Abstract Factory Design Pattern
+
+-  For creating families of related objects without specifying their concrete classes
+- The approach ensures adherence to principles like Open-Closed and Single Responsibility, allowing for easier maintenance and scalability. 
+- It is particularly useful when the system needs to work with related product families without exposing implementation details
+
