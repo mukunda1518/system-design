@@ -1,0 +1,9 @@
+# Good Read - https://www.enjoyalgorithms.com/blog/facade-design-pattern-java
+
+Facade Design Pattern
+
+- Structual design pattern that simplifies the interaction between the client and complex subsystems
+- Design facade class that works as an interface between the cilent and the interdependant classes in the subsystems
+- In simple terms Facade is a wrapper class which encapsulate the complexity of the subsystems and provide a simple interface to the client
+
+
