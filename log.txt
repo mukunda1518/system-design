@@ -1,0 +1,2 @@
+First log message
+Second Log message

@@ -1,0 +1,18 @@
+# Very good resource: https://www.enjoyalgorithms.com/blog/singleton-design-pattern
+
+Singleton Design Pattern
+
+- The Singleton design pattern is a creational design pattern that ensures a class has only one instance,
+    and provides a global access point to that instance.
+
+Benifits
+
+- Simplified access to a global resource: The Singleton pattern provides a single point of access to a shared resource, making it easier to manage and use throughout the application.
+- Reduced memory usage: By ensuring that only one instance of a class exists, the Singleton pattern can help to reduce memory usage, especially when dealing with resource-intensive objects.
+- Enforced global state: The Singleton pattern can be used to enforce a global state for a class, ensuring that all instances of the class have access to the same data.
+
+- Here are the drawbacks of using Singleton design pattern:
+
+- Tight coupling: The Singleton pattern can tightly couple different parts of your application, making it more difficult to test and maintain.
+- Reduced flexibility: The Singleton pattern can make it difficult to create multiple instances of a class for testing or other purposes.
+- Global state management: If not used carefully, the Singleton pattern can lead to complex global state management issues.- 
