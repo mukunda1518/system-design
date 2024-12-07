@@ -1,3 +1,5 @@
+Good Read: https://refactoring.guru/design-patterns/adapter
+
 Adapter Design Pattern
 
 - The Adapter design pattern is a structural design pattern that allows two incompatible objects to work together
