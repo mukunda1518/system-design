@@ -1,0 +1,13 @@
+Good Read - https://refactoring.guru/design-patterns/bridge
+
+Bridge Design Pattern
+
+- Bridge is a structural design pattern that lets you split a large class or a set of closely related classes into 
+- two separate hierarchies—abstraction and implementation—which can be developed independently of each other.
+
+ Applicability
+- Use the Bridge pattern when you want to divide and organize a monolithic class that has several variants of some functionality (for example, if the class can work with various database servers).
+- The bigger a class becomes, the harder it is to figure out how it works, and the longer it takes to make a change. The changes made to one of the variations of functionality may require making changes across the whole class, which often results in making errors or not addressing some critical side effects.
+- The Bridge pattern lets you split the monolithic class into several class hierarchies. After this, you can change the classes in each hierarchy independently of the classes in the others. This approach simplifies code maintenance and minimizes the risk of breaking existing code.
+
+
