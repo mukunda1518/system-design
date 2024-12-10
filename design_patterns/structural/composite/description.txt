@@ -1,0 +1,16 @@
+Composite Design Pattern
+
+- Structural design pattern that allows you to treat individual objects and compositions of objects uniformly.
+- It is particularly useful for representing tree structures such as file systems or arithmetic expressions
+
+
+Key Concepts
+- Component: An abstract class or interface that defines common operations for both individual objects and compositions.
+- Leaf: Represents individual objects in the composition. These objects do not have children.
+- Composite: Represents a group of objects (composite objects). These objects can contain other composites or leaves.
+
+
+Use Case
+- A file system consists of files and directories. A directory can contain both files and other directories, but a file cannot contain anything
+- A calculator needs to evaluate expressions like 1 + (2 * 3). Each operation (like addition or multiplication) is a composite object that combines numbers or other operations.
+
