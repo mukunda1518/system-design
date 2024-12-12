@@ -2,4 +2,14 @@
 Decorator Design Pattern
 
 - Decorator is a structural design pattern that lets you attach new behaviors to objects by placing these objects inside special wrapper objects that contain the behaviors
+- The Decorator Pattern is used to add functionality to an object dynamically.
+    - Instead of modifying the original object's code (which could break existing functionality or violate principles like Open/Closed Principle), you wrap it in a "decorator" object.
+
+
+Key Concepts:
+    - Component: Defines the interface for objects that can have responsibilities added to them (e.g., Notifier).
+    - Concrete Component: The core object that does the base work (e.g., SimpleNotifier).
+    - Decorator: An abstract class that implements the same interface as the component. It "wraps" the component.
+    - Concrete Decorators: Extend functionality by overriding the component's behavior or adding to it (e.g., SMSDecorator, FacebookDecorator).
+
 
