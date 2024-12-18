@@ -1,0 +1,21 @@
+Proxy Design Pattern
+
+- Proxy is a structural design pattern that lets you provide a substitute or placeholder for another object.
+- A proxy controls access to the original object, allowing you to perform something either before or after the request gets through to the original object
+
+
+Components
+- Subject Interface: Defines the interface the real object and proxy implement.
+- Real Subject: The object that performs the actual logic.
+- Proxy: The object that controls access to the real subject.
+
+
+Problem It Solves
+- The Proxy Design Pattern is useful in situations like:
+
+    - Access Control: Restrict access to certain methods or data of the real object.
+    - Lazy Initialization: Delay the creation or initialization of an expensive object until it is needed.
+    - Logging/Monitoring: Add logging, debugging, or monitoring capabilities without modifying the real object's code.
+    - Remote Access: Act as a local representative of an object in a different address space (e.g., on a remote server).
+    - Caching: Cache expensive operations and reuse results.
+
