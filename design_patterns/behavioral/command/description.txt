@@ -1,0 +1,20 @@
+
+Command Design Pattern
+
+The Command pattern is a behavioral design pattern that encapsulates a request as an object, thereby letting you:
+- Parameterize objects with different requests
+- Queue or log requests
+- Support undoable operations
+
+
+Real-world analogies:
+- Restaurant orders: A waiter takes your order (command), writes it down (command object), and passes it to the kitchen (invoker). The chef (receiver) executes the order.
+- Remote control: Each button represents a command that controls different devices.
+- GUI applications: Menu items and buttons that trigger different actions.
+
+
+Problems it solves:
+- Decoupling: Separates the object that invokes the operation from the object that performs it
+- Extensibility: New commands can be added without changing existing code
+- Command queuing and scheduling: Commands can be stored and executed later
+- Undo/Redo functionality: Commands can maintain state for reverting operations
