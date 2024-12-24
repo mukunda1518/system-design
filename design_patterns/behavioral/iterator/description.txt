@@ -1,0 +1,17 @@
+Iterator Design Pattern
+
+- The Iterator pattern provides a way to access elements of a collection sequentially without exposing its underlying representation.
+
+
+Key benefits:
+
+Simplifies collection traversal
+Encapsulates iteration logic
+Enables different iteration strategies
+Supports multiple concurrent iterations
+
+Real-world examples:
+
+File system traversal
+Paginated database queries
+Processing streaming data

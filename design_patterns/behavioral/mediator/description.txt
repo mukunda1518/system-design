@@ -1,0 +1,29 @@
+
+Mediator Design Pattern
+
+The Mediator Design Pattern is a behavioral design pattern that helps to reduce the direct dependencies between objects by centralizing their communication. Instead of having objects refer to and call each other directly,
+they communicate through a mediator, which encapsulates how objects interact.
+
+
+Problem Solved
+
+Reduces Complexity: In systems with many interconnected objects, direct communication can lead to tangled dependencies. The mediator simplifies this by acting as a central point of interaction.
+Improved Maintainability: Changes to how objects interact often require modifying multiple classes. With a mediator, changes are typically isolated within the mediator itself.
+Flexibility: New objects can be added to the system with minimal impact on existing objects, as long as they interact with the mediator.
+
+
+Real-World Use Cases
+
+Chat Applications: A chat server acts as a mediator between users, routing messages between them.
+Traffic Control System: A central controller mediates the flow of traffic signals at intersections.
+User Interface: A UI framework can act as a mediator between user input elements (buttons, text fields) and the underlying application logic.
+
+
+How to Apply
+
+Identify Interacting Objects: Determine which objects need to communicate with each other.
+Create the Mediator: Define an interface or abstract class for the mediator.
+Establish Communication: Make each interacting object aware of the mediator.
+Delegate Communication: Instead of communicating directly, objects send messages to the mediator.
+Implement Mediator Logic: The mediator handles the communication between objects based on the received messages
+
