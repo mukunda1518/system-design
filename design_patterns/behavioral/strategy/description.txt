@@ -1,0 +1,12 @@
+# Good Read: https://www.enjoyalgorithms.com/blog/strategy-design-pattern
+
+Strategy Design Pattern
+
+Strategy is a behavioral design pattern that lets you define a family of algorithms, put each of them into a separate class, and make their objects interchangeable
+
+
+Problems it solves:
+
+When you need different variants of an algorithm and want to switch between them dynamically
+When you have similar classes that only differ in their behavior
+When you want to isolate the algorithm logic from the code that uses the algorithm
