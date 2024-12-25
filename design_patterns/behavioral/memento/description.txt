@@ -1,0 +1,19 @@
+# Good read: https://medium.com/nerd-for-tech/understanding-memento-design-pattern-5c4f09be639
+
+
+Memento Design Pattern
+
+
+Memento Pattern (a.k.a. Snapshot Pattern) is a Behavioral design pattern, and it’s used to save and restore previous state of an object.
+If you want to develop an application, that has undo or rollback functionality, you should go with Memento Design Pattern.
+Most of the software developers use this pattern whenever they want to develop such functionality within their application
+
+The Memento Design Pattern has 3 components know as, Originator, Caretaker, and Memento.
+
+Originator: The object that we need to maintain the state. Basically, the Originator object creates a memento object to store its internal state. As a result, the Originator object knows how to save and restore itself.
+
+Caretaker: The object that keeps the track about Originator. Basically, Caretaker knows why and when the Originator needs to save and restore itself.
+
+Memento: The object that contains basic state storage and retrieval capabilities. Usually, the Memento object is immutable and pass it’s the data only once, through the constructor.
+
+

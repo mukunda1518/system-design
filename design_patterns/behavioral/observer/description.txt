@@ -1,0 +1,24 @@
+# Good Read: https://www.enjoyalgorithms.com/blog/observer-design-pattern
+
+Observer Design Pattern
+
+The Observer Design Pattern is a behavioral design pattern used when one object (the subject) changes its state and all dependent objects (observers) need to be notified and updated automatically.
+It defines a one-to-many dependency between objects
+
+
+Problem It Solves
+-----------------
+The observer pattern solves the problem of keeping multiple dependent objects in sync with the state of another object without tightly coupling them. This is especially useful when the number of dependents is dynamic or the subject must notify dependents without knowing their details.
+
+Real-World Use Cases
+-------------------
+News Publishing System: Subscribers (observers) are notified when new articles (subject) are published.
+Stock Market Monitoring: Stock data (subject) updates traders' dashboards (observers) in real-time.
+Weather Monitoring System: Weather station (subject) notifies display boards and applications (observers) about changes.
+UI Event Handling: A button (subject) notifies listeners (observers) when clicked
+
+--------------
+Key Components
+Subject: The main object that maintains the state and notifies observers of any change.
+Observers: Objects that need to be updated when the subject changes.
+Observer-Subject Relationship: Observers register with the subject to get updates, and the subject keeps track of them.
