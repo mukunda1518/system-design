@@ -1,0 +1,111 @@
+#########################  Design Patterns  ######################### 
+
+1. Singleton Pattern:
+
+```
+class ParkingLot:
+    _instance = None
+    
+    def __new__(cls):
+        if not cls._instance:
+            cls._instance = super().__new__(cls)
+            cls._instance.initialize()
+        return cls._instance
+```
+- Used to ensure only one instance of ParkingLot exists throughout the system
+- Makes sense as typically there's only one parking lot to manage
+
+
+2. Factory Pattern:
+
+```
+class ParkingSpotFactory:
+    def create_spot(self, spot_type: ParkingSpotType, spot_id: str, floor_id: str) -> ParkingSpot:
+        if spot_type == ParkingSpotType.MOTORCYCLE:
+            spot = MotorCycleSpot(spot_id, floor_id)
+        elif spot_type == ParkingSpotType.COMPACT:
+            spot = CompactSpot(spot_id, floor_id)
+        elif spot_type == ParkingSpotType.LARGE:
+            spot = LargeSpot(spot_id, floor_id)
+```
+- Used to create different types of parking spots
+- Encapsulates object creation logic in a single place
+
+
+3. Strategy Pattern:
+
+
+- Seen in the payment handling system where different payment types (Cash, Credit Card, etc.) can be used
+- PaymentType enum allows for different payment strategies
+
+
+4. Observer Pattern:
+
+
+- The DisplayBoard acts as an observer that monitors the state of parking spots
+- Updates the display when parking spot status changes
+
+
+######################### SOLID Principles Applied ###########################:
+
+1. Single Responsibility Principle (S):
+
+    Each class has a single, well-defined responsibility
+
+Examples:
+    - Payment class handles only payment processing
+    - ParkingTicket handles ticket-related operations
+    - DisplayBoard handles only display-related functionality
+
+2. Open-Closed Principle (O):
+
+    The code is open for extension but closed for modification
+
+Examples:
+
+    - New vehicle types can be added by extending the Vehicle class
+    - New parking spot types can be added by extending ParkingSpot
+    - New payment types can be added to PaymentType enum
+
+
+3. Liskov Substitution Principle (L):
+
+    - All derived classes (Car, Truck, etc.) can be substituted for their base class Vehicle
+    - Same applies to ParkingSpot and its derivatives
+
+
+4. Interface Segregation Principle (I):
+
+    - The interfaces (abstract classes) are small and specific
+    - Each abstract method serves a specific purpose
+    - Classes aren't forced to implement unnecessary methods
+
+5. Dependency Inversion Principle (D):
+
+    High-level modules depend on abstractions
+
+Examples:
+    - ParkingLot depends on abstract Vehicle and ParkingSpot classes
+
+
+#########################  Additional Design Considerations:   ######################### 
+
+1. Composition:
+
+```
+class ParkingFloor:
+    def __init__(self, floor_id: str):
+        self.parking_spots: dict[ParkingSpotType, list[ParkingSpot]] = {
+            spot_type: [] for spot_type in ParkingSpotType
+        }
+        self.display_board = DisplayBoard(floor_id)
+```
+
+- ParkingFloor composes ParkingSpots and DisplayBoard
+- ParkingLot composes ParkingFloors and Panels
+
+
+2. Encapsulation:
+
+    Private methods like `_vehicle_can_fit` in ParkingSpot
+
