@@ -1,0 +1,71 @@
+
+Design Tic Tac Toc game 
+
+
+Here's a comprehensive summary of the Design Patterns and SOLID Principles used in our Tic Tac Toe implementation:
+
+############## Design Patterns Used: #################
+
+1. Strategy Pattern
+
+Used in Player class hierarchy
+Enables different player behaviors (Human, potentially AI)
+Makes player behavior interchangeable
+Implementation: Abstract Player class with concrete HumanPlayer
+
+
+2. Builder Pattern
+
+Implemented through GameBuilder class
+Provides flexible game construction
+Handles validation during construction
+Enables fluent interface (method chaining)
+Example: GameBuilder().set_board_size(5).add_player(...)
+
+
+3. Value Object Pattern
+
+Used in Position class
+Immutable data structure (@dataclass(frozen=True))
+Represents row and column coordinates
+No identity, only values matter
+
+
+
+################## SOLID Principles Applied: #####################
+
+1. Single Responsibility Principle (S)
+
+Board: Manages game grid and move validation
+Player: Handles move input
+Game: Coordinates game flow
+Each class has one primary reason to change
+
+
+2. Open/Closed Principle (O)
+
+Player class is open for extension (new player types)
+Closed for modification
+Example: Can add AIPlayer without changing existing code
+
+
+3. Liskov Substitution Principle (L)
+
+HumanPlayer can be substituted anywhere Player is used
+Game works with Player base class
+All Player subtypes must fulfill Player contract
+
+
+4. Interface Segregation Principle (I)
+
+Player interface is minimal (only get_move method)
+No unnecessary methods forced on implementing classes
+Classes depend only on methods they use
+
+
+5. Dependency Inversion Principle (D)
+
+High-level Game depends on Player abstraction
+Not dependent on concrete Player implementations
+Enables easy testing and extension
+
