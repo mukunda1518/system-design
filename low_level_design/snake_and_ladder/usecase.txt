@@ -1,0 +1,150 @@
+
+------------------------------- Snake and Ladder -------------------------
+
+- Multi Player Game
+- Size of the board should be dynamic (m * n)
+- Posible to use more than 1 dice
+- No of snakes and ladders should be variable based on the level of the game
+- No loop for snakes and ladders
+- System should decide the game has ended
+
+
+
+------------ Snake and Ladder Game Analysis -----------
+
+##################### Actors
+
+Primary Actors:
+
+Human Player: Interacts directly with the game, makes moves
+Computer Player: AI-controlled player that follows game rules
+
+
+Secondary Actors:
+
+Game System: Manages game rules, board state, and flow
+Board: Maintains positions and game elements
+
+
+
+##################### Functional Requirements
+
+Game Setup
+
+Configure board size (m x n)
+Add multiple players (human/computer)
+Set number of dice
+Place snakes and ladders dynamically
+Validate snake and ladder positions
+
+
+Game Play
+
+Roll multiple dice
+Move players based on dice value
+Handle snake encounters (move down)
+Handle ladder encounters (move up)
+Track player positions
+Determine winning condition
+
+
+Game State Management
+
+Track game progress
+Record number of moves
+Identify winning player
+Display game state and results
+
+
+
+##################### Non-Functional Requirements
+
+Performance
+
+Efficient board state management
+Quick move validation
+Optimal memory usage for large boards
+
+
+Scalability
+
+Support variable board sizes
+Handle multiple players efficiently
+Accommodate different numbers of snakes and ladders
+
+
+Maintainability
+
+Clear code organization
+Well-documented classes and methods
+Modular design for easy updates
+
+
+Reliability
+
+Validate all moves and positions
+Prevent invalid game states
+Handle edge cases gracefully
+
+
+
+##################### Design Patterns Used
+
+Factory Method Pattern
+
+Used in creating snakes and ladders
+Game class acts as creator for game elements
+
+
+Strategy Pattern
+
+Different player types (Human/Computer) implement same interface
+Allows for different dice rolling strategies
+
+
+Singleton Pattern (potential)
+
+Could be applied to Game class for single game instance
+Manage global game state
+
+
+Observer Pattern (potential)
+
+Could be implemented for notifying players of game events
+Track game state changes
+
+
+
+#####################  SOLID Principles Applied
+
+Single Responsibility Principle (SRP)
+
+Each class has a single purpose
+Board manages board state
+Game manages game flow
+Snake/Ladder handle their specific behaviors
+
+
+Open/Closed Principle (OCP)
+
+Player interface allows adding new player types
+Game elements can be extended without modifying existing code
+
+
+Liskov Substitution Principle (LSP)
+
+HumanPlayer and ComputerPlayer can be used interchangeably
+All players follow IPlayer interface contract
+
+
+Interface Segregation Principle (ISP)
+
+IPlayer interface contains only essential methods
+No unnecessary dependencies between components
+
+
+Dependency Inversion Principle (DIP)
+
+High-level modules (Game) depend on abstractions (IPlayer)
+Low-level modules (HumanPlayer, ComputerPlayer) implement interfaces
+
