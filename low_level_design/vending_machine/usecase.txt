@@ -1,0 +1,9 @@
+Vending Machine LLD
+
+Requirements :
+- Ability to select an item
+- Ability to pay for an item (cash payment / credit/debit card payment)
+- The vending machine should be able to dispense items based on the user's selection
+- Notify the owner (serving agent) about the inventory status
+
+
