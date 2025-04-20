@@ -2,6 +2,8 @@
 
 # Reference - https://www.enjoyalgorithms.com/blog/single-responsibility-principle-in-oops
 
+# Violates SRP
+
 class DosaMaker:
     def makeDosa():
         pass
